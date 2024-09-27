@@ -1,22 +1,22 @@
 ﻿@model UserManagementService.Models.UserModel
 
-<h2>Login</h2>
+<h2>Вход</h2>
 
-<form asp-action="Login">
+<form asp-action="DisplayLoginPage">
     <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
+        <label asp-for="Email" class="control-label">Почта</label>
         <input asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Password" class="control-label"></label>
+        <label asp-for="Password" class="control-label">Пароль</label>
         <input asp-for="Password" type="password" class="form-control" />
         <span asp-validation-for="Password" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <input type="submit" value="Login" class="btn btn-primary" />
+        <input type="submit" value="Войти" class="btn btn-primary" />
     </div>
 </form>
-<a asp-action="DisplayRegistrationPage">Register as new user</a>
+<a asp-action="DisplayRegistrationPage">Зарегистрироваться</a>

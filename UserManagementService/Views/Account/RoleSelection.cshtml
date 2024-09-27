@@ -1,15 +1,15 @@
 ﻿@model UserManagementService.Models.UserModel
 
-<h2>Select Role</h2>
+<h2>Выбор ролии</h2>
 
-<form asp-action="Register">
+<form asp-action="DisplayLoginPage">
     <div class="form-group">
-        <label for="roleSelection">Select your role:</label>
+        <label for="roleSelection">Выберите вашу роль:</label>
         <select asp-for="Role" class="form-control" id="roleSelection">
-            <option value="User">User</option>
-            <option value="Librarian">Librarian</option>
-            <option value="Admin">Admin</option>
+            <option value="User">Пользователь</option>
+            <option value="Librarian">Сотрудник</option>
+            <option value="Admin">Администратор</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Continue</button>
+    <button type="submit" class="btn btn-primary">Продолжить</button>
 </form>

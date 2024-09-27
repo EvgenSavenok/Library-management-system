@@ -4,83 +4,83 @@ using UserManagementService.Services;
 
 namespace UserManagementService.Controllers
 {
-    public class UsersController : Controller
+    public class AccountController : Controller
     {
         private readonly IUserService _userService;
 
-        public UsersController(IUserService userService)
+        private void InitializeUsersDb()
+        {
+            using (UsersManagementContext db = new UsersManagementContext())
+            {
+                // User tom = new User { FirstName = "Tom", LastName = "Smith", 
+                //    Email = "1@rambler.ru", Password = "1111"};
+                //
+                // db.Users.Add(tom);
+                // db.SaveChanges();
+                // Console.WriteLine("Объекты успешно сохранены");
+                
+                var users = db.Users.ToList();
+                foreach (User u in users)
+                {
+                    Console.WriteLine($"{u.Id}.{u.FirstName} - {u.LastName} - {u.Email} - " +
+                                      $"{u.Password}");
+                }
+            }
+        }
+        public AccountController(IUserService userService)
         {
             _userService = userService;
+            InitializeUsersDb();
         }
-
-        // GET: Users
-        public IActionResult Index()
+        
+        public IActionResult RoleSelection()
         {
-            var users = _userService.GetAllUsers();
-            return View(users); // Возвращаем список пользователей для отображения в таблице
+            var userModel = new UserModel(); 
+            userModel.Role = UserModel.UserRole.Guest; 
+            return View(userModel);
         }
-
-        // GET: Users/Create
-        public IActionResult Create()
+        
+        public IActionResult DisplayRegistrationPage(UserModel.UserRole role)
+        {
+            var user = new UserModel { Role = role };
+            return View(user); 
+        }
+        
+        [HttpPost]
+        public IActionResult RegisterUser([Bind("FirstName,LastName,Email,Password," +
+                                                "PasswordConfirmation,Role")] UserModel user)
+        {
+            if (ModelState.IsValid)
+            {
+                _userService.RegisterUser(user); 
+                return RedirectToAction("DisplayLoginPage"); 
+            }
+            return View("DisplayRegistrationPage", user); 
+        }
+        
+        public IActionResult DisplayLoginPage()
         {
             return View();
         }
-
-        // POST: Users/Create
+        
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("FirstName,LastName,Email,Password")] User user)
+        public IActionResult DisplayLoginPage([Bind("Email,Password")] UserModel loginModel)
         {
-            if (ModelState.IsValid)
+            var user = _userService.Authenticate(loginModel.Email, loginModel.Password);
+            if (user != null)
             {
-                _userService.RegisterUser(user);
-                return RedirectToAction(nameof(Index));
+                switch (user.Role)
+                {
+                    case UserModel.UserRole.User:
+                        return Redirect("/UserDashboard");
+                    case UserModel.UserRole.Librarian:
+                        return Redirect("/LibrarianDashboard");
+                    case UserModel.UserRole.Admin:
+                        return Redirect("/AdminDashboard");
+                }
             }
-            return View(user);
-        }
-
-        // GET: Users/Edit/5
-        public IActionResult Edit(int id)
-        {
-            var user = _userService.GetUserById(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return View(user);
-        }
-
-        // POST: Users/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("Id,FirstName,LastName,Email,Password")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                _userService.UpdateUser(id, user);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(user);
-        }
-
-        // GET: Users/Delete/5
-        public IActionResult Delete(int id)
-        {
-            var user = _userService.GetUserById(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return View(user);
-        }
-
-        // POST: Users/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            _userService.DeleteUser(id);
-            return RedirectToAction(nameof(Index));
+            ModelState.AddModelError("", "Неудачная попытка входа");
+            return View();
         }
     }
 }
