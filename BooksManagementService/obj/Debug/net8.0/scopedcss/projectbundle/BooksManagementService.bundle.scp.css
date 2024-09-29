@@ -1,0 +1,49 @@
+/* _content/BooksManagementService/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-ounbi8xazw] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-ounbi8xazw] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ounbi8xazw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ounbi8xazw], .nav-pills .show > .nav-link[b-ounbi8xazw] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ounbi8xazw] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ounbi8xazw] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ounbi8xazw] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ounbi8xazw] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ounbi8xazw] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

@@ -1,0 +1,8 @@
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.AssemblyInfoInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.AssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.csproj.CoreCompileInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.RazorAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.RazorAssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BooksManagementService\obj\Debug\net8.0\BooksManagementService.sourcelink.json
