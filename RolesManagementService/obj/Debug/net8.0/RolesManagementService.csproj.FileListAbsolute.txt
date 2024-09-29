@@ -1,0 +1,8 @@
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.AssemblyInfoInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.AssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.csproj.CoreCompileInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.RazorAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.RazorAssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\RolesManagementService\obj\Debug\net8.0\RolesManagementService.sourcelink.json

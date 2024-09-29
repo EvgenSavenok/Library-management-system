@@ -1,0 +1,8 @@
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.AssemblyInfoInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.AssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.csproj.CoreCompileInputs.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.RazorAssemblyInfo.cache
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.RazorAssemblyInfo.cs
+C:\Users\eugen\RiderProjects\LibraryManagmentSystem\BorrowingManagementService\obj\Debug\net8.0\BorrowingManagementService.sourcelink.json
