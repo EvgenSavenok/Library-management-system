@@ -1,0 +1,45 @@
+﻿@model InventoryManagementService.Models.BookModel
+
+<h2>Добавить новую книгу</h2>
+
+<form asp-action="AddBook" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Название книги</label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Author" class="form-label">Автор</label>
+        <input asp-for="Author" class="form-control"/>
+        <span asp-validation-for="Author" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Year" class="form-label">Год издания</label>
+        <input asp-for="Year" type="number" class="form-control"/>
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Genre" class="form-label">Жанр:</label>
+        <select asp-for="Genre" class="form-control" id="roleSelection">
+            <option value="ScienceFiction">Научная фантастика</option>
+            <option value="Adventures">Приключения</option>
+            <option value="Horror">Ужастики</option>
+            <option value="LoveStories">Любовные романы</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Amount" class="form-label">Количество экземпляров</label>
+        <input asp-for="Amount" type="number" class="form-control"/>
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Добавить книгу</button>
+    <a href="@Url.Action("DisplayListOfBooksPage", "Book")" class="btn btn-secondary">Отмена</a>
+</form>
+
